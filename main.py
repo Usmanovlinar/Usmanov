@@ -1,2 +1,1 @@
-print('gerg')
-print('gel')
+print('hello hirls')
