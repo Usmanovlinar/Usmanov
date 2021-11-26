@@ -1,1 +1,2 @@
-print()
+print('gerg')
+print('gel')
