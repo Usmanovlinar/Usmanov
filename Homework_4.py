@@ -12,18 +12,19 @@ def start_war(attack):
     return wrapper
 class Character(ABC):
 
-    def __init__(self, name, hp, damage):
+    def __init__(self, name,location, hp, damage):
         self.name = name
         self.hp = hp
         self.damage = damage
+        self.location = location
 
     @start_war
     def attack(self, self2):
         self2.hp -= self.damage
 
 class Scout(Character):
-    def __init__(self, name, hp=100, damage=20):
-        super().__init__(name, hp, damage)
+    def __init__(self, name, location = [], hp=100, damage=10):
+        super().__init__(name, location, hp, damage)
     def who_i_am(self):
         print('i am scout')
     def attack(self, self2):
@@ -34,7 +35,14 @@ class Scout(Character):
         print('happen double jump')
     def gangsta_man(self):
         print('yo man i am gangsta')
+    def where_characters(self, location):
+        self.location = location
 
+
+    @staticmethod
+    def loc(object):
+        if object in object.location:
+            print(object.location.index(object))
 class Medic(Character):
     def __init__(self, name, hp=100, damage=10):
         super().__init__(name, hp, damage)
@@ -92,3 +100,10 @@ class Spy:
         print('i am not spy')
     def reincarnation(self):
         print('i am medic !!')
+
+scout_1 = Scout('Pablo', ['loc1', 'loc2'])
+scout_2 = Scout('Niaz')
+al_characters = [scout_1,scout_2]
+scout_2.where_characters(al_characters)
+Scout.loc('loc2')
+
