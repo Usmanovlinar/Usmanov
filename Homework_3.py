@@ -36,3 +36,10 @@ class UserController:
         result = chat_df[(chat_df.from_ == first_user) & (chat_df.to_ == second_user)
                          | (chat_df.to_ == first_user) & (chat_df.from_ == second_user)]
         return result.to_csv('Chat.csv', header=False)
+Vasiya = User('Вася', 'Пупкин')
+Vova = User('Вова', 'Лисин')
+Bob = User('Bob', 'Kelly')
+Tom = User('Tom', 'Ford')
+
+userConroller = UserController
+userConroller.get_all_messages('Tom Ford', 'Bob Kelly')
