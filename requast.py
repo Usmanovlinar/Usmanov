@@ -3,37 +3,19 @@ import requests
 import json
 
 result = requests.get("https://reqres.in/api/users?page=2").json() # dict
-new = result["data"] # list users
-path = os.getcwd() # current directory
-for i in range(0, len(new)):
-    folder  = str(new[0]['id'])
-    with open(path + folder )
-with open(path + '/text_' ,'w') as file:
+dict_human = result["data"] # list users
+path = str(os.getcwd())+"/users_data" # current directory
+os.mkdir(path)
 
-file.write('fsdf')
-for human in new:
-    print(human["id"])
+for i in range(0, len(dict_human)):
+    number_folder  = str(dict_human[i]['id'])
+    os.mkdir(path + "/id" + number_folder)
+    with open(path + "/id" + number_folder + "/user_info", 'w') as file:
+        for key in ["email", "first_name", "last_name"]:
+            file.write(f'{dict_human[i][key]}\n')
 
+    with open(path + "/id" + number_folder + '/avatar.jpg', 'wb') as file:
+        response = requests.get(dict_human[i]['avatar'])
 
+        file.write(response.content)
 
-'''
-with open('text1.txt', 'w') as file:
-    file.write(result)
-os.path.join(mypath, filename)
-with open('text1.txt', 'r') as file:
-    list_all_users = json.loads(file.read())['data']
-'''
-
-'''print(os.getcwd())
-os.mkdir('users_data')'''
-
-'''import requests
-from bs4 import BeautifulSoup
-link = 'https://browser-info.ru/'
-response = requests.get(link)p
-soup  = BeautifulSoup(response.text, 'html.parser')
-for item in soup.find_all('img'):
-    print(item['src'])
-
-
-'''
