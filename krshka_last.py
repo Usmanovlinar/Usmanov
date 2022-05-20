@@ -29,6 +29,7 @@ if __name__ == '__main__':
             a.wait()
     print(time.time() - t1, 'секунд')
 
+#номер 1
 from os import makedirs
 from os.path import join
 import requests
