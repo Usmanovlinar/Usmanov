@@ -1,0 +1,11 @@
+{
+  "ip": "178.213.247.152",
+  "city": "Kazan",
+  "region": "Tatarstan Republic",
+  "country": "RU",
+  "loc": "55.7887,49.1221",
+  "org": "AS3325 Kazan University",
+  "postal": "422525",
+  "timezone": "Europe/Moscow",
+  "readme": "https://ipinfo.io/missingauth"
+}
