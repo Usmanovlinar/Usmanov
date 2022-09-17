@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+body {
+	margin: 0; /* убираю внешние и внутренние отступы*/
+	padding: 0;
+	/* подключаю шрифт*/
+	font-family: 'Oswald', sans-serif;
+	/* жирность шрифта*/
+	font-weight: 400;
+}
+
+li, ul{
+	/* убираю точки в элементах списка */
+	list-style: none;
+}
+
+main{
+	/* помогает расставить элементы в ряд */
+	display: flex;
+	/* центрирует элементы  */
+	justify-content: center;
+}
+.logo{
+	display: flex;
+	justify-content: center;
+}
+
+.wrap-inner{
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrap-inner ul{
+	display: flex;
+}
+
+.wrap-inner li{
+	padding: 10px;
+}
+
+
+.logo span{
+	font-size: 2em;
+}
+
+.header-wrap img{
+	width: 100px;
+	height: 90px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+main{
+	padding-top: 5em;
+}
+
+.catalog{
+	display: flex;
+}
+
+.catalog-item{
+	display: flex;
+	flex-direction: column;
+}
+
+.catalog-title{
+	text-align: center;
+}
+
+.catalog-img img{
+	width: 15em;
+	height: 10em;
+}
